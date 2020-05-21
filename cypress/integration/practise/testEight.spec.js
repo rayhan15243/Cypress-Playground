@@ -17,7 +17,7 @@ describe('Basic Page interactions', () => {
 
         cy.get('[data-cy=box-1-selected-name]')
         .invoke('text')
-        .should('equal', 'Option Three')
+        .should('equal', 'Option Two')
 
         });
 
