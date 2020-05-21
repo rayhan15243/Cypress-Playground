@@ -8,7 +8,7 @@ describe("CMS Upgrade Test", function(){
     cy.get('#_Textbox_Password').type('Password1', { force: true, log: false })
     cy.get('#ctl35').click({ force: true})
     // cy.get('form').submit()
-    cy.wait(3000)
+   
 
  
 })
@@ -21,7 +21,7 @@ it('Invalid Username', function() {
  cy.get('#_Textbox_Password').type('Password1', { force: true, log: false })
   cy.get('#ctl35').click({ force: true})
   // cy.get('form').submit()
-  cy.wait(4000)
+ 
 })
 
 it('Invalid Password', function() {
@@ -32,7 +32,7 @@ it('Invalid Password', function() {
  cy.get('#_Textbox_Password').type('Password11', { force: true, log: false })
   cy.get('#ctl35').click({ force: true})
   // cy.get('form').submit()
-  cy.wait(4000)
+ 
 })
 
 
@@ -43,11 +43,11 @@ it('Logout', function() {
       cy.get('#_Textbox_Password').type('Password1', { force: true, log: false })
       cy.get('#ctl35').click({ force: true})
       // cy.get('form').submit()
-      cy.wait(5000)
+  
       cy.get('#UI_UserToolbar_CurrentUser_hyperlink').click({ force: true})
-      cy.wait(5000)
+   
       cy.get('#cm_logout_item').click({ force: true})
-      cy.wait(12000)
+     
  })
 
  
@@ -61,13 +61,13 @@ it('Logout', function() {
   cy.get('#_Textbox_Password').type('Password1', { force: true, log: false })
   cy.get('#ctl35').click({ force: true})
   // cy.get('form').submit()
-  cy.wait(5000)
+ 
   cy.get('#UI_UserToolbar_CurrentUser_hyperlink').click({ force: true})
-  cy.wait(5000)
+
   cy.get('#cm_logout_item').click({ force: true})
-  cy.wait(5000)
+
   cy.go('back') 
-  cy.wait(5000)
+
 
   
 

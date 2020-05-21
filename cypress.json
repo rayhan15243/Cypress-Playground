@@ -4,7 +4,7 @@
   "viewportWidth": 1440,
   "viewportHeight": 900,
   "projectId": "e53xvv",
-  "baseUrl": "http://localhost:3000",
+ 
 
   "env" : {
   "MY_ENV_VARIABLE": "hello"

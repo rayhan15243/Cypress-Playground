@@ -2,6 +2,7 @@
 
 
 // alert(Cypress.env('MY_ENV_VARIABLE'));
+// "baseUrl": "http://localhost:3000",
 
 
 describe('Basic Page interactions', () => {
