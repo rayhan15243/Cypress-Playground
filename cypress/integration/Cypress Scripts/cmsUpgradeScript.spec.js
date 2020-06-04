@@ -57,7 +57,7 @@ it('Logout', function() {
  it('Login Session Inactive Back Button', function() {
   cy.visit("https://cms-kcl-test.cloud.contensis.com/Default.aspx/#")
   cy.get('#_Textbox_Username').type('rayhantest', { force: true, log: false})
-  // cy.get('#_Textbox_Password').type('Password1{enter}',  { force: true })
+  // cy.get('#_Textbox_Passwords').type('Password1{enter}',  { force: true })
   cy.get('#_Textbox_Password').type('Password1', { force: true, log: false })
   cy.get('#ctl35').click({ force: true})
   // cy.get('form').submit()
