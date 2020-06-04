@@ -37,6 +37,6 @@ describe("URL Redirects", function(){
   it('MFA', function() {cy.visit('mfasetup.kcl.ac.uk')})
   it('Fed Serv Update Password', function() {cy.visit('fedserv.kcl.ac.uk/adfs/portal/updatepassword')})
   it('Fed Serv', function() {cy.visit('fedserv.kcl.ac.uk')})
-  it('AISEP', function() {cy.visit('aisep.kcl.ac.uk')})
+  it('AISEP 2', function() {cy.visit('aisep.kcl.ac.uk')})
   
 })
