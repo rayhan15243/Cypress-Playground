@@ -10,20 +10,20 @@ executors:
     docker:
       - image: 'cypress/browsers:node13.6.0-chrome80-ff72'
 
- simplest use case - do everything in a single job
+# simplest use case - do everything in a single job
 workflows:
  build:
  jobs:
     - cypress/run
 
-# run tests using Chrome browser
+#run tests using Chrome browser
 # (requires custom executor with Cypress docker image that has Chrome installed)
-# workflows:
-#   build:
-#     jobs:
-#       - cypress/run:
-#           executor: cypress/browsers-chrome69
-#           browser: chrome
+workflows:
+ build:
+    jobs:
+      - cypress/run:
+          executor: cypress/browsers-chrome69
+          browser: chrome
 
 # single job, but build the app and start server
 # workflows:
