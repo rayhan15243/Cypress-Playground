@@ -40,34 +40,34 @@ workflows:
 #       - cypress/run:
 #           record: false
 #           spec: "cypress/integration/*-b.js"
-jobs:
-  unit:
-    executor:
-      name: node/default
-      tag: '12'
-    steps:
-      - checkout
-      - node/with-cache:
-          steps:
-            - run: npm ci
-      - run: npm test
+# jobs:
+#  unit:
+#    executor:
+#      name: node/default
+#      tag: '12'
+#    steps:
+#      - checkout
+#     - node/with-cache:
+#          steps:
+#            - run: npm ci
+#      - run: npm test
 
 # custom cypress run command
-workflows:
+# workflows:
   # a workflow to run on dependency updates with Renovate
-  dependencies:
-    jobs:
-      - cypress/run:
-          name: test dependencies
-          filters:
-            branches:
-              only: /renovate.*/
-          no-workspace: true
-          record: true
-          tags: dependencies,renovate
+ # dependencies:
+  #  jobs:
+   #   - cypress/run:
+   #       name: test dependencies
+   #        filters:
+   #          branches:
+   #            only: /renovate.*/
+   #        no-workspace: true
+   #        record: true
+   #        tags: dependencies,renovate
 
-  build:
-    jobs:
+#   build:
+#     jobs:
       # could not run unit tests on Circle, validating config files
       # always caused an error:
       # Error: Configuration version 2.1 requires the "Enable Pipelines" project setting.
@@ -77,33 +77,33 @@ workflows:
       # - unit
 
       # checks out code and installs dependencies once
-      - cypress/run:
-          filters:
-            branches:
-              ignore: /^renovate/
-          name: Mochawesome report
+  #     - cypress/run:
+  #         filters:
+   #          branches:
+   #            ignore: /^renovate/
+  #         name: Mochawesome report
           # it is a single job, so no need to
           # cache workspace (faster!)
-          no-workspace: true
-          command: 'npm run report'
-          post-steps:
-            - store_test_results:
-                path: cypress/results
+  #         no-workspace: true
+  #         command: 'npm run report'
+  #         post-steps:
+  #           - store_test_results:
+   #              path: cypress/results
 
       # run tests inside Docker image with Chrome pre-installed
-      - cypress/run:
-          filters:
-            branches:
-              ignore: /^renovate/
-          name: Chrome 80
-          executor: chrome80-ff72
-          no-workspace: true
-          record: true
-          browser: chrome
+  #     - cypress/run:
+  #         filters:
+  #           branches:
+   #            ignore: /^renovate/
+  #         name: Chrome 80
+  #         executor: chrome80-ff72
+  #         no-workspace: true
+  #         record: true
+   #        browser: chrome
           # before running tests, show if any environment variables
           # starting with CYPRESS are set
           # using https://github.com/bahmutov/print-env
-          build: npx has-env CYPRESS
+  #         build: npx has-env CYPRESS
 
 # realistic case: install in 1 job,
 # run tests in parallel on several machines after that
