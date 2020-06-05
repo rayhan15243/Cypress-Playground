@@ -39,7 +39,7 @@ executors:
     jobs:
      - cypress/run:
         record: false
-        spec: "cypress/integration/Cypress Scripts/*-urlRedirects.spec.js"
+        spec: 'cypress/integration/Cypress Scripts/*-urlRedirects.spec.js'
 # jobs:
 #  unit:
 #    executor:
