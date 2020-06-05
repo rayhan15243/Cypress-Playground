@@ -4,20 +4,17 @@ orbs:
   # best practice is to use an exact version
   cypress: cypress-io/cypress@1.22.0
   node: circleci/node@1.1
-
 executors:
   chrome80-ff72:
     docker:
       - image: 'cypress/browsers:node13.6.0-chrome80-ff72'
-
       # run only specific spec file
- workflows:
+workflows:
   build:
     jobs:
      - cypress/run:
         record: false
         spec: 'cypress/integration/Cypress Scripts/*-urlRedirects.spec.js'
-
 # simplest use case - do everything in a single job
 # workflows:
 # build:
