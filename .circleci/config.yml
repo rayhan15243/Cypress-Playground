@@ -10,6 +10,14 @@ executors:
     docker:
       - image: 'cypress/browsers:node13.6.0-chrome80-ff72'
 
+      # run only specific spec file
+ workflows:
+  build:
+    jobs:
+     - cypress/run:
+        record: false
+        spec: 'cypress/integration/Cypress Scripts/*-urlRedirects.spec.js'
+
 # simplest use case - do everything in a single job
 # workflows:
 # build:
@@ -33,13 +41,7 @@ executors:
  #         build: "npm run build"
  #        start: "npm run server"
 
-# run only specific spec file
- workflows:
-  build:
-    jobs:
-     - cypress/run:
-        record: false
-        spec: 'cypress/integration/Cypress Scripts/*-urlRedirects.spec.js'
+
 # jobs:
 #  unit:
 #    executor:
