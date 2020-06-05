@@ -18,20 +18,20 @@ executors:
 
 #run tests using Chrome browser
 # (requires custom executor with Cypress docker image that has Chrome installed)
-# workflows:
-# build:
- #    jobs:
- #      - cypress/run:
- #          executor: cypress/browsers-chrome69
- #          browser: chrome
+ workflows:
+ build:
+     jobs:
+       - cypress/run:
+          executor: cypress/browsers-chrome69
+         browser: chrome
 
 # single job, but build the app and start server
- workflows:
-   build:
-    jobs:
-     - cypress/run:
-         build: "npm run build"
-        start: "npm run server"
+# workflows:
+ #   build:
+#     jobs:
+ #     - cypress/run:
+ #         build: "npm run build"
+ #        start: "npm run server"
 
 # run only specific spec file
 # workflows:
