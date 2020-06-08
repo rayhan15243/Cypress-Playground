@@ -8,7 +8,7 @@ describe("Sticky Nav", function(){
             cy.contains('Section 4').should('be.visible').click()
             cy.contains('Section 5').should('be.visible').click()
             cy.contains('Section 6').should('be.visible').click()
-            cy.scrollTo(0, 500)    
+            
   })
 
  
