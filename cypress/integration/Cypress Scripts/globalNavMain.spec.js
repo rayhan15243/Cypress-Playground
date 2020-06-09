@@ -15,10 +15,13 @@ describe("Global Nav Main", function(){
         cy.contains('Study').click()
         cy.go('back')
         cy.contains('Student services').click()
+        cy.go('back')
         cy.contains('Research & Innovation').click()
+        cy.go('back')
         cy.contains('Our faculties').click()
+        cy.go('back')
         cy.contains('About King\'s').click()
-        
+        cy.go('back')
 })
 
   it('Hover Drop Down', function() {
