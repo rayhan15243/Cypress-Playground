@@ -16,14 +16,14 @@ gitchrome80-ff72:
 #        record: false
 #        spec: 'cypress/integration/Cypress Scripts/cmsUpgradeScript.spec.js'
 
-  schedule-workflow:
-  triggers:
-      - schedule: 
+    schedule-workflow:
+      triggers:
+        - schedule: 
           cron: "0 * * * *"
           jobs:
-     - cypress/run:
-        record: false
-        spec: 'cypress/integration/Cypress Scripts/cmsUpgradeScript.spec.js'
+       - cypress/run:
+          record: false
+          spec: 'cypress/integration/Cypress Scripts/cmsUpgradeScript.spec.js'
 # simplest use case - do everything in a single job
 # workflows:
 # build:
