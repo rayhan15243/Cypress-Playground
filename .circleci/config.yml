@@ -12,7 +12,8 @@ chrome80-ff72:
 workflows:
   build:
     jobs:
-schedule-workflow:
+      - build
+workflows:
 triggers:
   - schedule: 
       cron: "0 * * * *"
