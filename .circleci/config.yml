@@ -15,11 +15,11 @@ chrome80-ff72:
 #     - cypress/run:
 #        record: false
 #        spec: 'cypress/integration/Cypress Scripts/cmsUpgradeScript.spec.js'
-    schedule-workflow:
-      triggers:
-        - schedule: 
-          cron: "0 * * * *"
-          jobs:
+schedule-workflow:
+triggers:
+  - schedule: 
+      cron: "0 * * * *"
+      jobs:
        - cypress/run:
           record: false
           spec: 'cypress/integration/Cypress Scripts/cmsUpgradeScript.spec.js'
