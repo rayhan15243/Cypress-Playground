@@ -1,5 +1,35 @@
 describe("CMS Upgrade Test", function(){
 
+
+  
+ 
+  
+   it('Empty Username Fieldnpm install --save-dev cypress@4.8.0', function() {
+    cy.visit("https://cms-kcl-test.cloud.contensis.com/Default.aspx/#")
+   // cy.get('#_Textbox_Username').type('rayhantest', { force: true, log: false})
+   // cy.get('#_Textbox_Passwords').type('Password1{enter}',  { force: true })
+    cy.get('#_Textbox_Password').type('Password1', { force: true, log: false })
+    cy.get('#ctl35').click({ force: true})
+    cy.contains('required field')
+  
+  })
+
+
+  it('Empty Password Field', function() {
+    cy.visit("https://cms-kcl-test.cloud.contensis.com/Default.aspx/#")
+    cy.get('#_Textbox_Username').type('rayhantest', { force: true, log: false})
+    cy.get('#ctl35').click({ force: true})
+    cy.contains('Password is a required field')
+  
+  })
+
+  it('Empty Password and Username Field', function() {
+    cy.visit("https://cms-kcl-test.cloud.contensis.com/Default.aspx/#")
+    cy.get('#ctl35').click({ force: true})
+    cy.contains('required field')
+  
+  })
+
   it('Successful Login', function() {
     
     cy.visit("https://cms-kcl-test.cloud.contensis.com/Default.aspx/#")
@@ -8,9 +38,7 @@ describe("CMS Upgrade Test", function(){
     cy.get('#_Textbox_Password').type('Password1', { force: true, log: false })
     cy.get('#ctl35').click({ force: true})
     // cy.get('form').submit()
-   
 
- 
 })
 
 it('Invalid Username', function() {
@@ -67,9 +95,6 @@ it('Logout', function() {
   cy.get('#cm_logout_item').click({ force: true})
 
   cy.go('back') 
-
-
-  
 
 })
 
