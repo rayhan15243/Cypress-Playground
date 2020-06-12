@@ -12,7 +12,9 @@ chrome80-ff72:
 workflows:
   build:
     jobs:
-      - build
+    - cypress/run:
+        record: false
+        spec: 'cypress/integration/Cypress Scripts/cmsUpgradeScript.spec.js'
 schedule-workflow:
 triggers:
   - schedule: 
