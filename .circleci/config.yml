@@ -12,7 +12,6 @@ chrome80-ff72:
 workflows:
   build:
     jobs:
-      - build
 schedule-workflow:
 triggers:
   - schedule: 
