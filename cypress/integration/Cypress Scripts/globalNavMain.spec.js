@@ -63,6 +63,7 @@ it('Secondary Nav Clicked', function() {
     cy.contains('Student life').click(),{ force: true}
     cy.go('back')
     cy.contains('Visit King\’s').click(),{ force: true}
+    
 }) 
 
 
