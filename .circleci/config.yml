@@ -23,7 +23,10 @@ daily:
         filters:
             branches:
               only:
-                - master                              
+                - master   
+            jobs:
+             - build 
+                          
 # simplest use case - do everything in a single job
 # workflows:
 # build:
