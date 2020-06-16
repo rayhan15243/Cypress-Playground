@@ -2,6 +2,8 @@
     "cSpell.ignoreWords": [
         "circleci",
         "cypress",
-        "demo"
+        "demo",
+        "mochawesome",
+        "retrigger"
     ]
 }
