@@ -16,7 +16,7 @@ workflows:
         record: false
         spec: 'cypress/integration/Cypress Scripts/stickyNav.spec.js'
 daily:
-  triggers:
+triggers:
     - schedule: 
         #cron: "0 * * * *"
         cron: "* * * * *"
