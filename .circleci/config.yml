@@ -18,7 +18,8 @@ workflows:
 daily:
   triggers:
     - schedule: 
-        cron: "0 * * * *"
+        #cron: "0 * * * *"
+        cron: "*/5 * * * *"
 # simplest use case - do everything in a single job
 # workflows:
 # build:
