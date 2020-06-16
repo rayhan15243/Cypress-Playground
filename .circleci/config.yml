@@ -10,6 +10,11 @@ chrome80-ff72:
       - image: 'cypress/browsers:node13.6.0-chrome80-ff72'
 # run only specific spec file
 workflows:
+  build:
+    jobs:
+    - cypress/run:
+        record: false
+        spec: 'cypress/integration/Cypress Scripts/stickyNav.spec.js'
   daily:
     triggers:
     - schedule: 
@@ -18,13 +23,9 @@ workflows:
         filters:
             branches:
               only:
-                - master      
-  build:
-    jobs:
-    - cypress/run:
-        record: false
-        spec: 'cypress/integration/Cypress Scripts/stickyNav.spec.js'
-                       
+                - master   
+        jobs:
+                - build                          
 # simplest use case - do everything in a single job
 # workflows:
 # build:
