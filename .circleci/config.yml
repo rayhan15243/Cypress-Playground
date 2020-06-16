@@ -18,7 +18,7 @@ workflows:
     - cypress/run:
         record: false
         spec: 'cypress/integration/Cypress Scripts/stickyNav.spec.js'
-daily:
+nightly:
     triggers:
     - schedule: 
         #cron: "0 * * * *"
