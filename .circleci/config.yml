@@ -9,10 +9,11 @@ executors:
     docker:
       - image: 'cypress/browsers:node13.6.0-chrome80-ff72'
 # run only specific spec file
-commit:
+workflows:
+  version: 2
+  commit:
     jobs:
       - build
-workflows:
   build:
     jobs:
     - cypress/run:
@@ -26,7 +27,9 @@ nightly:
         filters:
             branches:
               only:
-              - master                           
+              - master  
+    jobs:
+      - build                         
 # simplest use case - do everything in a single job
 # workflows:
 # build:
