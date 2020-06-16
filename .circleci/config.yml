@@ -25,7 +25,8 @@ commit-workflow:
           cron: "* * * * *"
           filters:
             branches:
-              only: master
+            only:
+            - master
     jobs:
       - build                        
 # simplest use case - do everything in a single job
