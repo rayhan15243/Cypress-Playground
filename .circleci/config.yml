@@ -15,16 +15,16 @@ workflows:
     - cypress/run:
         record: false
         spec: 'cypress/integration/Cypress Scripts/stickyNav.spec.js'
-  daily:
-    triggers:
+daily:
+  triggers:
     - schedule: 
         #cron: "0 * * * *"
-        cron:  "* * * * *"
+        cron: "* * * * *"
         filters:
             branches:
               only:
                 - master   
-        jobs:
+            jobs:
                 - build                          
 # simplest use case - do everything in a single job
 # workflows:
