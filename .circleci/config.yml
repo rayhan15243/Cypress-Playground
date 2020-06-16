@@ -15,11 +15,15 @@ workflows:
     - cypress/run:
         record: false
         spec: 'cypress/integration/Cypress Scripts/cmsUpgradeScript.spec.js'
-nightly:
+daily:
   triggers:
     - schedule: 
         #cron: "0 * * * *"
         cron: "*/5 * * * *"
+        filters:
+            branches:
+              only:
+                - master                              
 # simplest use case - do everything in a single job
 # workflows:
 # build:
