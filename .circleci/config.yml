@@ -19,7 +19,7 @@ daily:
   triggers:
     - schedule: 
         #cron: "0 * * * *"
-        cron: "*/5 * * * *"
+        cron: "*/1 * * * *"
         filters:
             branches:
               only:
