@@ -13,7 +13,6 @@ workflows:
   version: 2
   commit:
     jobs:
-      - build
       - cypress/run:
           record: false
           spec: 'cypress/integration/Cypress Scripts/stickyNav.spec.js'
