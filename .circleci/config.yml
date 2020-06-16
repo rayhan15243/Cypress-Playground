@@ -18,9 +18,7 @@ workflows:
         filters:
             branches:
               only:
-                - master   
-        jobs:
-                - build     
+                - master      
   build:
     jobs:
     - cypress/run:
