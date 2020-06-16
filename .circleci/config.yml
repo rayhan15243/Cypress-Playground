@@ -25,7 +25,7 @@ daily:
               only:
                 - master   
             jobs:
-             - build 
+                - build 
                           
 # simplest use case - do everything in a single job
 # workflows:
