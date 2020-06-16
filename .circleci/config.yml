@@ -12,9 +12,7 @@ chrome80-ff72:
 workflows:
   build:
     jobs:
-    - cypress/run:
-        record: false
-        spec: 'cypress/integration/Cypress Scripts/stickyNav.spec.js'
+    - build
 daily:
   triggers:
     - schedule: 
@@ -25,7 +23,9 @@ daily:
               only:
                 - master   
             jobs:
-                - build                          
+             - cypress/run:
+                record: false
+                spec: 'cypress/integration/Cypress Scripts/stickyNav.spec.js'                   
 # simplest use case - do everything in a single job
 # workflows:
 # build:
