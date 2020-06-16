@@ -15,7 +15,7 @@ workflows:
     - cypress/run:
         record: false
         spec: 'cypress/integration/Cypress Scripts/cmsUpgradeScript.spec.js'
-daily:
+nightly:
   triggers:
     - schedule: 
         #cron: "0 * * * *"
