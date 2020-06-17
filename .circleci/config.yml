@@ -19,9 +19,6 @@ deploy:
         spec: 'cypress/integration/Cypress Scripts/stickyNav.spec.js'
 workflows:
   version: 2
-  commit:
-    jobs:
-    - build
   schedule-workflow:
     triggers:
       - schedule:
