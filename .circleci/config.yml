@@ -26,6 +26,7 @@ daily:
               only:
               - master 
     jobs:
+      - chrome80-ff72
       - build                          
 # simplest use case - do everything in a single job
 # workflows:
