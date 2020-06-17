@@ -26,10 +26,6 @@ daily:
     - schedule: 
         #cron: "0 * * * *"
         cron:  "* * * * *"
-        filters:
-            branches:
-              only:
-              - master 
     jobs:
       - build   
       - deploy                       
