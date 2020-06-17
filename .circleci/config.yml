@@ -11,6 +11,7 @@ executors:
 # run only specific spec file
 jobs:
   build:
+    executors:
     docker:
       - image: 'cypress/browsers:node13.6.0-chrome80-ff72'
     working_directory: ~/CypressScripts
