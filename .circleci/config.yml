@@ -17,11 +17,14 @@ workflows:
   commit-workflow:
     jobs:
       - build 
+      - cypress/run:
+          record: false
+          spec: 'cypress/integration/Cypress Scripts/cmsUpgradeScript.spec.js' 
 # run with schedule
   daily:
     triggers:
       - schedule:
-          cron: "5 0 * * *"
+          cron: "* * * * *"
           filters:
             branches:
               only: master
