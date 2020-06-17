@@ -13,6 +13,7 @@ commit:
     jobs:
       - build
 workflows:
+  version: 2
   build:
     jobs:
     - cypress/run:
@@ -22,7 +23,7 @@ nightly:
     triggers:
     - schedule: 
         #cron: "0 * * * *"
-        cron:  "* * * * *"
+        cron:  "0 0 * * *"
         filters:
             branches:
               only:
