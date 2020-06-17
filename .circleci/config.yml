@@ -4,21 +4,44 @@ orbs:
   # best practice is to use an exact version
   cypress: cypress-io/cypress@1.22.0
   node: circleci/node@1.1
-executors:
-  chrome80-ff72:
+jobs:
+  build:
+    executors:
     docker:
       - image: 'cypress/browsers:node13.6.0-chrome80-ff72'
-# run only specific spec file
-commit:
-    jobs:
-      - build
+    working_directory: ~/CypressScripts
+    steps:
+      - checkout
 workflows:
   version: 2
-  build:
+  commit-workflow:
     jobs:
-    - cypress/run:
-        record: false
-        spec: 'cypress/integration/Cypress Scripts/stickyNav.spec.js'                        
+      - build 
+# run with schedule
+  daily:
+    triggers:
+      - schedule:
+          cron: "*/5 * * * *"
+          filters:
+            branches:
+              only: master
+    jobs:
+      - build     
+      - cypress/run:
+          record: false
+          spec: 'cypress/integration/Cypress Scripts/cmsUpgradeScript.spec.js'     
+# run without schedule
+
+# commit:
+#    jobs:
+#      - build
+# workflows:
+#  version: 2
+#  build:
+#    jobs:
+#    - cypress/run:
+#        record: false
+#        spec: 'cypress/integration/Cypress Scripts/stickyNav.spec.js'                        
 # simplest use case - do everything in a single job
 # workflows:
 # build:
