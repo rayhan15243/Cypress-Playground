@@ -16,14 +16,12 @@ workflows:
   version: 2
   build:
     jobs:
-    - cypress/run:
-        record: false
-        spec: 'cypress/integration/Cypress Scripts/stickyNav.spec.js'
+    - build
 daily:
     triggers:
     - schedule: 
         #cron: "0 * * * *"
-        cron:  "0 0 * * *"
+        cron:  "* * * * *"
         filters:
             branches:
               only:
