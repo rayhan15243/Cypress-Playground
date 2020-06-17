@@ -4,19 +4,24 @@ orbs:
   # best practice is to use an exact version
   cypress: cypress-io/cypress@1.22.0
   node: circleci/node@1.1
-executors:
-  chrome80-ff72:
+jobs:
+  build:
+    executors:
+    chrome80-ff72:
     docker:
       - image: 'cypress/browsers:node13.6.0-chrome80-ff72'
-# run only specific spec file
-workflows:
-  version: 2
-  build:
-    jobs:
+    steps:
     - cypress/run:
         record: false
         spec: 'cypress/integration/Cypress Scripts/stickyNav.spec.js'
-daily:
+
+# run only specific spec file
+workflows:
+  version: 2
+  commit-workflow:
+    jobs:
+    - build
+  schedule-workflow:
     triggers:
     - schedule: 
         #cron: "0 * * * *"
