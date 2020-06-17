@@ -9,13 +9,18 @@ executors:
     docker:
       - image: 'cypress/browsers:node13.6.0-chrome80-ff72'
 # run only specific spec file
-workflows:
-  version: 2
-  build:
-    jobs:
+deploy:
+  docker:
+      - image: 'cypress/browsers:node13.6.0-chrome80-ff72'
+  steps:
     - cypress/run:
         record: false
         spec: 'cypress/integration/Cypress Scripts/stickyNav.spec.js'
+workflows:
+  version: 2
+commit:
+ jobs:
+    - build
 daily:
     triggers:
     - schedule: 
@@ -26,8 +31,8 @@ daily:
               only:
               - master 
     jobs:
-      - chrome80-ff72
-      - build                          
+      - build   
+      - deploy                       
 # simplest use case - do everything in a single job
 # workflows:
 # build:
