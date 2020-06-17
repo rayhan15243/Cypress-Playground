@@ -11,9 +11,6 @@ jobs:
     working_directory: ~/CypressScripts
     steps:
       - checkout
-      - cypress/run:
-          record: false
-          spec: 'cypress/integration/Cypress Scripts/stickyNav.spec.js'
 workflows:
   version: 2
   commit-workflow:
@@ -27,7 +24,10 @@ workflows:
             branches:
               only: master
     jobs:
-      - build                          
+      - build     
+      - cypress/run:
+          record: false
+          spec: 'cypress/integration/Cypress Scripts/stickyNav.spec.js'                     
 # simplest use case - do everything in a single job
 # workflows:
 # build:
