@@ -70,13 +70,12 @@ it('Logout', function() {
 
 
 
- it('Login Session Inactive Back Button', function() {
+ it.only('Login Session Inactive Back Button', function() {
   cy.get('#_Textbox_Username').type('rayhantest', { force: true, log: false})
   // cy.get('#_Textbox_Passwords').type('Password1{enter}',  { force: true })
   cy.get('#_Textbox_Password').type('Password1', { force: true, log: false })
   cy.get('#ctl35').click({ force: true})
   // cy.get('form').submit()
- 
   cy.get('#UI_UserToolbar_CurrentUser_hyperlink').click({ force: true})
   cy.get('#cm_logout_item').click({ force: true})
   cy.go('back') 
