@@ -5,7 +5,7 @@ describe ('Heading text', () => {
     cy.visit('http://localhost:3000/study/undergraduate/subject-area/physics')
     cy.get('h1')
         .invoke('text')
-        .should('equal', 'Physics');
+        .should('be.visible', 'Physics');
     });
 
     it('WEBR-3920 - Course Listing Undergraduate', function() {
