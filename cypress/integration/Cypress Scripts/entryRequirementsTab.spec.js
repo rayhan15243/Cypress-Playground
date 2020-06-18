@@ -1,40 +1,39 @@
-describe("Entry Requirements tab", function(){
+import { 
+    navigate, 
+    entryRequirements,
+    qualifications, 
+    internationalBaccalaureate,
+    gcse,international } from "../../page-objects/ugCourse";
 
+
+describe("Entry Requirements Tab", function(){
+
+    beforeEach(() => {
+        navigate()
+})
     it('Entry Requirements', function() {
-        cy.visit("http://dev.preview.kcl-dev.contensis.cloud/study/undergraduate/courses/english")
-        cy.contains('Entry requirements').should('be.visible').click()
-        cy.contains('Required grades').should('be.visible')
-        cy.contains('Required subjects').should('be.visible')
-        cy.contains('Preferred subjects').should('be.visible')
+        
+        entryRequirements() 
       
     })
 
     it('Qualifications', function() {
-        cy.visit("http://dev.preview.kcl-dev.contensis.cloud/study/undergraduate/courses/english")
-        cy.contains('Entry requirements').should('be.visible').click()
-        cy.get('#altQualifications').select('Australian diploma')
+        qualifications()
       
     })
 
     it('International Baccalaureate', function() {
-        cy.visit("http://dev.preview.kcl-dev.contensis.cloud/study/undergraduate/courses/english")
-        cy.contains('Entry requirements').should('be.visible').click()
-        cy.contains('International Baccalaureate').should('be.visible')
+        internationalBaccalaureate()
       
     })
 
     it('GCSEs', function() {
-        cy.visit("http://dev.preview.kcl-dev.contensis.cloud/study/undergraduate/courses/english")
-        cy.contains('Entry requirements').should('be.visible').click()
-        cy.contains('GCSEs').should('be.visible')
+        gcse()
         
     })
 
     it('International', function() {
-        cy.visit("http://dev.preview.kcl-dev.contensis.cloud/study/undergraduate/courses/english")
-        cy.contains('Entry requirements').should('be.visible').click()
-        cy.get('#intQualifications').select('Brazil')
-        cy.get('#intQualifications').select('New Zealand')
+       international()
       
     })
 
