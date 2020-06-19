@@ -1,4 +1,3 @@
-/// <reference types="cypress" />
 describe("Accessibility Demo", function(){
 
    
