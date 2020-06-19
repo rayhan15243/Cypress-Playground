@@ -62,7 +62,7 @@ it('Logout', function() {
 
 
 
- it.only('Login Session Inactive Back Button', function() {
+ it('Login Session Inactive Back Button', function() {
   
   inactiveSession()
 
