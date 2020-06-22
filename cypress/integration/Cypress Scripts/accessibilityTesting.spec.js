@@ -1,9 +1,14 @@
+
 describe("Accessibility Demo", function(){
 
+    beforeEach(() => {
+
+        cy.visit("http://dev.preview.kcl.contensis.cloud/study/undergraduate/subject-area/physics")
+        cy.injectAxe();
+    })
+
    
-   it('Physics Subject Area', function() {
-       cy.visit("http://dev.preview.kcl.contensis.cloud/study/undergraduate/subject-area/physics")
-       cy.injectAxe();
-       cy.checkA11y();
+   it('No detectable ally violations on page load', function() {
+        cy.checkA11y()
     });
 });
