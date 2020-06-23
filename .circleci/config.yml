@@ -21,7 +21,7 @@ workflows:
           executor: cypress/browsers-chrome69
           browser: chrome
           record: false
-          spec: 'cypress/integration/Cypress Scripts/urlRedirects.spec.js' 
+          spec: 'cypress/integration/Cypress Scripts/cmsUpgradeScript.spec.js' 
 # run with schedule
   daily:
     triggers:
