@@ -18,6 +18,8 @@ workflows:
     jobs:
       - build 
       - cypress/run:
+          executor: cypress/browsers-chrome69
+          browser: chrome
           record: false
           spec: 'cypress/integration/Cypress Scripts/cmsUpgradeScript.spec.js' 
 # run with schedule
@@ -31,6 +33,8 @@ workflows:
     jobs:
       - build     
       - cypress/run:
+          executor: cypress/browsers-chrome69
+          browser: chrome
           record: false
           spec: 'cypress/integration/Cypress Scripts/cmsUpgradeScript.spec.js'     
 # run without schedule
