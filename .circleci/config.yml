@@ -48,7 +48,8 @@ workflows:
 #    jobs:
 #    - cypress/run:
 #        record: false
-#        spec: 'cypress/integration/Cypress Scripts/stickyNav.spec.js'                        
+#        spec: 'cypress/integration/Cypress Scripts/stickyNav.spec.js'    
+
 # simplest use case - do everything in a single job
 # workflows:
 # build:
@@ -71,8 +72,6 @@ workflows:
  #     - cypress/run:
  #         build: "npm run build"
  #        start: "npm run server"
-
-
 # jobs:
 #  unit:
 #    executor:
