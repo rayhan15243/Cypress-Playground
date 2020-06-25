@@ -3,7 +3,7 @@ describe("Visual Validation Physics Subject Area", function(){
         cy.visit("http://dev.preview.kcl.contensis.cloud/study/undergraduate/subject-area/physics")
         cy.eyesOpen({
             appName: 'Physics Page', 
-            testName: 'Physics Page Hey!' })
+            testName: 'Physics Subject Area Page' })
 
         browser: [
 
