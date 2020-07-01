@@ -4,15 +4,16 @@ describe("Visual Validation Physics Subject Area", function(){
         cy.eyesOpen({
             appName: 'Physics Page', 
             testName: 'Physics Subject Area Page' })
-
+        
         browser: [
 
             {name: 'chrome', width: 1024, height: 768},
-            {deviceName: 'iPhone X'},
+            {name: 'safari', width: 1024, height: 768},
+            {deviceName: 'iPhone 5/SE'},
 
         ]
       });
-   
+     
 
     it('Physics Subject Area', function() {
     

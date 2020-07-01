@@ -36,7 +36,7 @@ workflows:
           executor: cypress/browsers-chrome69
           browser: chrome
           record: false
-          spec: 'cypress/integration/cypress-scripts/urlRedirects.spec.js'  
+          spec: 'cypress/integration/cypress-scripts/cmsUpgradeScript.spec.js'  
 
 # run without schedule
 
