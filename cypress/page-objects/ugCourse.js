@@ -1,5 +1,5 @@
 export function navigate() {
-    cy.visit("http://preview.kcl.contensis.cloud/study/undergraduate/courses/english-test")     
+    cy.visit("http://dev.preview.kcl.contensis.cloud/study/undergraduate/courses/english-test#")     
 }
 
 export function assessment() {
@@ -9,7 +9,9 @@ export function assessment() {
     cy.contains('Learning outcomes').should('be.visible')
    //cy.contains('Structure').should('be.visible')
     cy.contains('Required modules').should('be.visible')
-    cy.contains('Optional modules').should('be.visible')   
+    cy.contains('Optional modules').should('be.visible')  
+    
+    cy.get(".info-icon").should('be.visible')
 }
 
 export function awardingInstitutes() {

@@ -9,8 +9,11 @@ describe("Visual Validation Physics Subject Area", function(){
                  { width: 1366, height: 768, name: 'chrome' },
                  { width: 1366, height: 768, name: 'firefox' },
                  { width: 1366, height: 768, name: 'safari' },
-                 { width: 1366, height: 768, name: 'ie11' }
-               ]
+                 { width: 1366, height: 768, name: 'ie11' },
+                 { deviceName: 'iPhone X'},
+                 { deviceName: 'Galaxy S5'}
+            ],
+            matchLevel: "Layout"
            });
          });
      
@@ -20,9 +23,9 @@ describe("Visual Validation Physics Subject Area", function(){
 
       cy.eyesCheckWindow({
         layout: [
-          {top: 0, left: 0, width: 2000, height: 5000},
-          {selector: '.some-div-to-test-as-layout'}
-        ]
+         
+        ],
+          fully: true
       });
     
     });
