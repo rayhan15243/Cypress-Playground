@@ -6,10 +6,10 @@ describe("Visual Validation Physics Subject Area", function(){
             testName: 'Physics Subject Area Page',
             appName: 'Physics Page',
             browser: [
-                 { width: 1366, height: 768, name: 'chrome' },
-                 { width: 1366, height: 768, name: 'firefox' },
-                 { width: 1366, height: 768, name: 'safari' },
-                 { width: 1366, height: 768, name: 'ie11' },
+                 { width: 1440, height: 900, name: 'chrome' },
+                 { width: 1440, height: 900, name: 'firefox' },
+                 { width: 1440, height: 900, name: 'safari' },
+                 { width: 1440, height: 900, name: 'ie11' },
                  { deviceName: 'iPhone X'},
                  { deviceName: 'Galaxy S5'}
             ],
