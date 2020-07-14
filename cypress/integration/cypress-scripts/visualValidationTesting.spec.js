@@ -1,10 +1,10 @@
-describe("Visual Validation Physics Subject Area", function(){
+describe("Visual Validation King'\s Foundation", function(){
        
         beforeEach(() => {
-          cy.visit("http://dev.preview.kcl.contensis.cloud/study/undergraduate/subject-area/physics")
+          cy.visit("http://dev.preview.kcl.contensis.cloud/study/test-foundation-course")
           cy.eyesOpen({
-            testName: 'Physics Subject Area Page',
-            appName: 'Physics Page',
+            testName: 'King\'s Foundation',
+            appName: 'King\'s Foundation Page',
             browser: [
                  { width: 1440, height: 900, name: 'chrome' },
                  { width: 1440, height: 900, name: 'firefox' },
