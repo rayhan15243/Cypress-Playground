@@ -1,17 +1,17 @@
 describe("Visual Validation King'\s Foundation", function(){
        
   beforeEach(() => {
-          cy.visit("http://dev.preview.kcl.contensis.cloud/study/test-foundation-course")
+          cy.visit("http://dev.preview.kcl.contensis.cloud/study/undergraduate/courses/english-test")
         });
 
 
   it("Desktop Visual Validation", function() {
 
-    cy.viewport(1440, 900) 
+    cy.viewport(1440, 800) 
 
     cy.eyesOpen({
      
-      testName: 'King\'s Foundation Page',
+      testName: 'King\'s Foundation Page Desktop',
       appName: 'King\'s Foundation Page',
       browser: [
            { width: 1440, height: 900, name: 'chrome' },
@@ -29,39 +29,36 @@ describe("Visual Validation King'\s Foundation", function(){
      
     ],
       fully: true
-  });
+    });
   
   });
-  
-      
-     
+  it('Mobile Visual Validation', function() {
 
-    it('Mobile Visual Validation', function() {
+    cy.viewport(1000, 800) 
+    cy.wait(2000)
 
-     
-      cy.eyesOpen({
-        testName: 'King\'s Foundation Desktop',
-        appName: 'King\'s Foundation Page',
-        browser: [
-             { deviceName: 'iPhone X'},
-             { deviceName: 'Galaxy S5'}
-        ],
-        matchLevel: "Layout"
-    
-  });
+    cy.eyesOpen({
+      testName: 'King\'s Foundation Page Mobile',
+      appName: 'King\'s Foundation Page',
+      browser: [
+            { deviceName: 'iPhone X'},
+            { deviceName: 'Galaxy S5'}
+      ],
+      matchLevel: "Layout"
+    });
 
  
 
-      cy.eyesCheckWindow({
-        layout: [
-         
-        ],
-          fully: true
-      });
-    
+    cy.eyesCheckWindow({
+      layout: [
+      ],
+        fully: true
     });
+    
+  });
 
-    afterEach(() => {
-        cy.eyesClose();
-      });
+  afterEach(() => {
+    cy.eyesClose();
+  });
  });
+  

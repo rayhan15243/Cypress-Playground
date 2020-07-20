@@ -99,3 +99,8 @@ export function genericFunding () {
     cy.contains('Fees & Funding').should('be.visible').click()
     cy.contains('Funding').should('be.visible')
 }
+
+export function getLocationDisclaimerText() {
+    cy.contains('Course essentials').should('be.visible')
+    cy.get('.text > p').should('be.visible')
+}

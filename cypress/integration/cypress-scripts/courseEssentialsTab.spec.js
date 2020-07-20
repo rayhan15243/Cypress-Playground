@@ -7,7 +7,8 @@ regulatingBodies,
 partners, 
 additionalCampuses, 
 additionalLocation, 
-awardingInstitutions } from "../../page-objects/ugCourse";
+awardingInstitutions,
+getLocationDisclaimerText } from "../../page-objects/ugCourse";
 
 describe("Course Essentials Tab", function(){
 
@@ -58,6 +59,12 @@ it('Awarding Institutions', function() {
        
         awardingInstitutions()
     
+})
+
+it.only('Location Disclaimer', () => {
+   
+        getLocationDisclaimerText()
+                 
 })
 
 

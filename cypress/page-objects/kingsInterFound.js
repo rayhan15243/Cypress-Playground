@@ -9,3 +9,4 @@ export function getTitle() {
     cy.get('.course-category').should('have.text', "King's International Foundation")
 
 }
+
