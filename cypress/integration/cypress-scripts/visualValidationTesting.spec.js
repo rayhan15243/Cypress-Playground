@@ -1,7 +1,7 @@
 describe("Visual Validation King'\s Foundation", function(){
        
   beforeEach(() => {
-          cy.visit("http://dev.preview.kcl.contensis.cloud/study/undergraduate/courses/english-test")
+          cy.visit("http://dev.preview.kcl.contensis.cloud/study/test-foundation-course")
         });
 
 

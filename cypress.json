@@ -1,6 +1,8 @@
 {
   "pageLoadTimeout": 400000,
   "chromeWebSecurity": false,
+  "viewportWidth": 1440,
+  "viewportHeight": 900,
   "projectId": "e53xvv",
   "video": false,
   "env" : {
