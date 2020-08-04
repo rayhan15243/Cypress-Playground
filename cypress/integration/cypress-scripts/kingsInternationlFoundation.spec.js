@@ -1,4 +1,4 @@
-import { navigate, getTitle} from "../../page-objects/kingsInterFound";
+import { navigate, getTitle, keyInformation} from "../../page-objects/kingsInterFound";
 
 describe("Kings International Foundation Course", () => {
    
@@ -12,12 +12,18 @@ beforeEach(() => {
 it('Page Title', () => {
    
    getTitle()
+ 
             
 })
 
 
-
+it.only("Key Info Section", () => {
+   keyInformation()
+}) 
 
 
 
 })
+
+
+
