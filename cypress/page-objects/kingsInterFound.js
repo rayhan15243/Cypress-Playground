@@ -12,8 +12,7 @@ export function getTitle() {
 
 export function keyInformation() {
 
-   cy.contains("Foundation")
-   .should('be.visible')
+   cy.contains("Foundation").should('be.visible')
 
 }
 
