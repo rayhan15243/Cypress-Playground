@@ -1,3 +1,6 @@
+// "viewportWidth": 1440,
+// "viewportHeight": 900,
+
 describe("Visual Validation King'\s Foundation", function(){
        
   beforeEach(() => {

@@ -19,9 +19,9 @@ export function terminalLog(violations) {
   }
 
   export function runAlly() {
-    it('No detectable ally violations on page load', function() {
+    it('UG Course Pages Accessibility Testing', function() {
         
-        cy.visit("http://dev.preview.kcl.contensis.cloud/study/undergraduate/subject-area/physics")
+        cy.visit("http://dev.preview.kcl.contensis.cloud/study/undergraduate/courses/english-test")
         cy.injectAxe();
         cy.checkA11y(null, null, terminalLog)
         });
