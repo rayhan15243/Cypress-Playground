@@ -1,5 +1,4 @@
-import { 
-    navigate, defaultFee, genericFunding, } from "../../page-objects/ugCourse";
+import {  navigate, displayFeesFunding } from "../../page-objects/ugCourse";
 
 
 describe("Fees & Funding Tab", function(){
@@ -8,12 +7,10 @@ describe("Fees & Funding Tab", function(){
         navigate()
 })
 
-it('AC3 Default fee', function() {
-        defaultFee()
-})
+it(' Fees & Funding Information', function() {
+    
+    displayFeesFunding() 
 
-it('AC7 Generic Funding', function() {
-    genericFunding()
 })
 
 })

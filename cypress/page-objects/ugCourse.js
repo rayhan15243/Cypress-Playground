@@ -1,5 +1,8 @@
+
+
 export function navigate() {
-    cy.visit("http://dev.preview.kcl.contensis.cloud/study/undergraduate/courses/english-test#")     
+   
+    cy.visit("http://dev.preview.kcl.contensis.cloud/study/undergraduate/courses/english-test")
 }
 
 export function assessment() {
@@ -88,17 +91,17 @@ export function international() {
     cy.get('#intQualifications').select('New Zealand')
 }
 
-export function defaultFee () {
-
-    cy.contains('Fees & Funding').should('be.visible').click()
-    cy.contains('£9250').should('be.visible')
-}
-
-export function genericFunding () {
-
-    cy.contains('Fees & Funding').should('be.visible').click()
+export function displayFeesFunding() {
+    
+    cy.contains('Fees & Funding').should('be.visible').click({ force: true})
+    cy.contains('£9,250').should('be.visible')
     cy.contains('Funding').should('be.visible')
+    cy.contains('£40000').should('be.visible')
+    cy.contains('£5000').should('be.visible')
+    cy.contains('Further fee information').should('be.visible')
+    cy.contains('Additional costs further information').should('be.visible')
 }
+
 
 export function getLocationDisclaimerText() {
     cy.contains('Course essentials').should('be.visible')

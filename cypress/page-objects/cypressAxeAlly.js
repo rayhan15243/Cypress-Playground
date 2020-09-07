@@ -25,4 +25,6 @@ export function terminalLog(violations) {
         cy.injectAxe();
         cy.checkA11y(null, null, terminalLog)
         });
+
+        // npx cypress run --spec "cypress/integration/cypress-scripts/accessibilityTesting.spec.js"
   }
