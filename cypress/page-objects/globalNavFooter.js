@@ -3,8 +3,6 @@ export function navigate() {
 }
 
 
-
-
 export function keyNav () {
     cy.contains('Study').should('be.visible')
     cy.contains('Student services').should('be.visible')
