@@ -55,7 +55,7 @@ it('Additional locations', function() {
 })
 
 
-it('Awarding Institutions', function() {
+it('Awarding Institutionss', function() {
        
         awardingInstitutions()
     
