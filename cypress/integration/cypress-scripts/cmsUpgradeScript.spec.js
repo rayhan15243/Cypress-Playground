@@ -9,7 +9,7 @@ import {
   inactiveSession, emptyUserPassFields} from "../../page-objects/cmsUpgrade";
 
 
-describe("CMS Upgrade Regression Test", function(){
+describe("CMS Upgrade Regression Tests", function(){
   
   beforeEach(() => {
 
