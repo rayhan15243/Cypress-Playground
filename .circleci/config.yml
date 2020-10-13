@@ -16,7 +16,7 @@ workflows:
   version: 2
   commit-workflow:
     jobs:
-      - build 
+    #  - build 
       - cypress/run:
           executor: cypress/browsers-chrome69
           browser: chrome
