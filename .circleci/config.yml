@@ -1,43 +1,39 @@
 version: 2.1
-# orbs:
   # use latest 1.x.y version of the orb
   # best practice is to use an exact version
-#  cypress: cypress-io/cypress@1.22.0
-#  node: circleci/node@1.1
 jobs:
   build:
-    cypress: cypress-io/cypress@1.22.0
     executors:
     docker:
-      - image: 'cypress/browsers:node13.6.0-chrome80-ff72'
+      - image: 'cypress/browsers:node13.6.0-chrome80-ff72' 
     working_directory: ~/cypress-scripts
     steps:
       - checkout
-workflows:
-  version: 2
-  commit-workflow:
-    jobs:
-      - build 
       - cypress/run:
           executor: cypress/browsers-chrome69
           browser: chrome
           record: false
-          spec: 'cypress/integration/cypress-scripts/cmsUpgradeScript.spec.js' 
+          spec: 'cypress/integration/cypress-scripts/cmsUpgradeScript.spec.js'
+workflows:
+  version: 2
+  commit-workflow:
+    jobs:
+      - build  
 # run with schedule
 #  daily:
 #   triggers:
 #      - schedule:
 #          cron: "00,00 05 * * *"
-#          filters:
-#            branches:
-#              only: master
-#   jobs:
-#      - build     
-#      - cypress/run:
-#          executor: cypress/browsers-chrome69
-#          browser: chrome
-#          record: false
-#          spec: 'cypress/integration/cypress-scripts/cmsUpgradeScript.spec.js'  
+ #         filters:
+ #           branches:
+ #             only: master
+ #   jobs:
+ #     - build     
+ #     - cypress/run:
+ #         executor: cypress/browsers-chrome69
+ #         browser: chrome
+ #         record: false
+ #         spec: 'cypress/integration/cypress-scripts/cmsUpgradeScript.spec.js'  
 
 # run without schedule
 
