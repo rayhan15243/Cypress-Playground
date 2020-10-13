@@ -1,28 +1,27 @@
 version: 2.1
+orbs:
+  # use latest 1.x.y version of the orb
+  # best practice is to use an exact version
+  cypress: cypress-io/cypress@1.22.0
+  node: circleci/node@1.1
 jobs:
-  run_cypress_tests:
+  build:
+    executors:
     docker:
-      - image: cypress/base:12.16.1
+      - image: 'cypress/browsers:node13.6.0-chrome80-ff72'
+    working_directory: ~/cypress-scripts
     steps:
       - checkout
-      - run:
-          name: Install Dependencies
-          command: npm i
-      - run:
-          name: Run Cypress Tests
-          command: npx cypress run --spec "cypress/integration/cypress-scripts/cmsUpgradeScript.spec.js "
-      - run:
-          name: Generate Mochawesome Report
-          command: npm run generate:html:report
-      - store_artifacts:
-          path: TestReport
-      - store_artifacts:
-          path: cypress/videos
 workflows:
-  build:
-    jobs: 
-      - run_cypress_tests 
-
+  version: 2
+  commit-workflow:
+    jobs:
+      - build 
+      - cypress/run:
+          executor: cypress/browsers-chrome69
+          browser: chrome
+          record: false
+          spec: 'cypress/integration/cypress-scripts/cmsUpgradeScript.spec.js' 
 # run with schedule
 #  daily:
 #   triggers:
