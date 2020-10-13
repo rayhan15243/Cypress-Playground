@@ -23,20 +23,20 @@ workflows:
           record: false
           spec: 'cypress/integration/cypress-scripts/cmsUpgradeScript.spec.js' 
 # run with schedule
-#  daily:
-#   triggers:
-#      - schedule:
-#          cron: "00,00 05 * * *"
- #         filters:
- #           branches:
- #             only: master
- #   jobs:
- #     - build     
- #     - cypress/run:
- #         executor: cypress/browsers-chrome69
- #         browser: chrome
- #         record: false
- #         spec: 'cypress/integration/cypress-scripts/cmsUpgradeScript.spec.js'  
+  daily:
+   triggers:
+      - schedule:
+          cron: "00,00 05 * * *"
+          filters:
+            branches:
+              only: master
+   jobs:
+      - build     
+      - cypress/run:
+          executor: cypress/browsers-chrome69
+          browser: chrome
+          record: false
+          spec: 'cypress/integration/cypress-scripts/cmsUpgradeScript.spec.js'  
 
 # run without schedule
 
