@@ -10,7 +10,7 @@ jobs:
           command: npm i
       - run:
           name: Run Cypress Tests
-          command: npm test
+          command: 'cypress/integration/cypress-scripts/cmsUpgradeScript.spec.js'
 workflows:
   build:
     jobs: 
