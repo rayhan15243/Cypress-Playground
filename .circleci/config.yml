@@ -10,11 +10,18 @@ jobs:
           command: npm i
       - run:
           name: Run Cypress Tests
-          command: 'cypress/integration/cypress-scripts/cmsUpgradeScript.spec.js'
+          command: npx cypress run --spec "cypress/integration/cypress-scripts/cmsUpgradeScript.spec.js "
+      - run:
+          name: Generate Mochawesome Report
+          command: npm run generate:html:report
+      - store_artifacts:
+          path: TestReport
+      - store_artifacts:
+          path: cypress/videos
 workflows:
   build:
     jobs: 
-      - run_cypress_tests
+      - run_cypress_tests 
 
 # run with schedule
 #  daily:
