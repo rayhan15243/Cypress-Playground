@@ -4,14 +4,14 @@ orbs:
   # best practice is to use an exact version
   cypress: cypress-io/cypress@1.22.0
   node: circleci/node@1.1
-#jobs:
- # build:
- #   executors:
-  #  docker:
-  #    - image: 'cypress/browsers:node13.6.0-chrome80-ff72'
- #   working_directory: ~/cypress-scripts
- #   steps:
- #     - checkout
+jobs:
+  build:
+    executors:
+    docker:
+      - image: 'cypress/browsers:node13.6.0-chrome80-ff72'
+    working_directory: ~/cypress-scripts
+    steps:
+      - checkout
 workflows:
   version: 2
   commit-workflow:
