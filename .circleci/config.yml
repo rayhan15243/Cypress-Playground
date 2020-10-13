@@ -6,7 +6,10 @@ version: 2.1
 #  node: circleci/node@1.1
 jobs:
   build:
-    executors:
+    executors: cypress/browsers-chrome69
+    browser: chrome
+    record: false
+    spec: 'cypress/integration/cypress-scripts/cmsUpgradeScript.spec.js'
     docker:
       - image: 'cypress/browsers:node13.6.0-chrome80-ff72'
     working_directory: ~/cypress-scripts
