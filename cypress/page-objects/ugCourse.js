@@ -6,15 +6,13 @@ export function navigate() {
 }
 
 export function assessment() {
-    cy.contains('Teaching & structure').should('be.visible').click({ force: true})
-    cy.contains('Assessment').should('be.visible')
-    cy.contains('Teaching methods').should('be.visible')
-    cy.contains('Learning outcomes').should('be.visible')
-   //cy.contains('Structure').should('be.visible')
-    cy.contains('Required modules').should('be.visible')
-    cy.contains('Optional modules').should('be.visible')  
-    
-    cy.get(".info-icon").should('be.visible')
+    cy.contains('Teaching & structure').click({ force: true})
+    cy.contains('Assessment')
+    cy.contains('Teaching methods')
+    cy.contains('Learning outcomes')
+    cy.contains('Structure')
+    cy.contains('Required modules')
+    cy.contains('Optional modules')
 }
 
 export function awardingInstitutes() {
@@ -93,13 +91,13 @@ export function international() {
 
 export function displayFeesFunding() {
     
-    cy.contains('Fees & Funding').should('be.visible').click({ force: true})
-    cy.contains('£9,250').should('be.visible')
-    cy.contains('Funding').should('be.visible')
-    cy.contains('£40000').should('be.visible')
-    cy.contains('£5000').should('be.visible')
-    cy.contains('Further fee information').should('be.visible')
-    cy.contains('Additional costs further information').should('be.visible')
+    cy.contains('Fees & Funding')
+    cy.contains('£9,250')
+    cy.contains('Funding')
+    cy.contains('£40000')
+    cy.contains('£5000')
+    cy.contains('Further fee information')
+    cy.contains('Additional costs further information')
 }
 
 
