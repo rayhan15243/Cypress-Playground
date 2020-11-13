@@ -1,4 +1,4 @@
-import { navigate, getTitle, keyInformation} from "../../page-objects/kingsInterFound";
+import { navigate, getTitle, keyInformation, contactComponent} from "../../page-objects/kingsInterFound";
 
 describe("Kings International Foundation Course", () => {
    
@@ -17,8 +17,13 @@ it('Page Title', () => {
 })
 
 
-it.only("Key Info Section", () => {
+it("Key Info Section", () => {
    keyInformation()
+}) 
+
+
+it.only("Contact Us Section", () => {
+   contactComponent()
 }) 
 
 
