@@ -2,7 +2,7 @@
  // cy.get('form').submit()
 
 export function navigate() {
-   // cy.visit("https://cms-kcl-test.cloud.contensis.com/Default.aspx/#")
+      // cy.visit("https://cms-kcl-test.cloud.contensis.com/Default.aspx/#")
       cy.visit("https://cms-kcl-dev.cloud.contensis.com/Default.aspx")
 }
 
