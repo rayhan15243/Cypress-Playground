@@ -1,7 +1,7 @@
 import { 
     navigate, 
     subjectAreaTitle, 
-    courseListing } from "../../page-objects/subjectArea";
+    courseListing } from "../../modules/subjectArea";
 
 describe ('Heading text', () => {
 

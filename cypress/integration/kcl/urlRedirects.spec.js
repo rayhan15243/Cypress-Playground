@@ -1,4 +1,4 @@
-import { testData } from "../../page-objects/urlRedirects";
+import { testData } from "../../modules/urlRedirects";
 
 
 describe("URL Redirects", function(){

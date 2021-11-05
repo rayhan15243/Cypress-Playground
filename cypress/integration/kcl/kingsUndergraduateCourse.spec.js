@@ -1,4 +1,4 @@
-import { navigate, ugRegression } from "../../page-objects/ugCourse";
+import { navigate, ugRegression } from "../../modules/ugCourse";
 
 
 

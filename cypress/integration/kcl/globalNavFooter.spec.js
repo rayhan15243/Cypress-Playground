@@ -2,7 +2,7 @@ import {
     navigate, 
     connectWithKings,
     globalFooterSubjectArea,
-    mainGlobalFooterSubjectArea} from "../../page-objects/globalNavFooter";
+    mainGlobalFooterSubjectArea} from "../../modules/globalNavFooter";
 
 
 describe("Global Footer", function(){

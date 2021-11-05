@@ -1,4 +1,4 @@
-import { navigate, getTitle, keyInformation, contactComponent} from "../../page-objects/kingsInterFound";
+import { navigate, getTitle, keyInformation, contactComponent} from "../../modules/kingsInterFound";
 
 describe("Kings International Foundation Course", () => {
    

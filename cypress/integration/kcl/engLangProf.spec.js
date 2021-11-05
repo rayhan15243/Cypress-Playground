@@ -1,4 +1,4 @@
-import { navigate, sections } from "../../page-objects/engLang";
+import { navigate, sections } from "../../modules/engLang";
 
 describe("English Language Proficiency", () => {
    

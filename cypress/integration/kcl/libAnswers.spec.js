@@ -2,7 +2,7 @@ import {
     navigate, 
     search,
     mainNav,
-    dropDowns} from "../../page-objects/libAnswers";
+    dropDowns} from "../../modules/libAnswers";
 
 describe("Lib Answers", function(){
 

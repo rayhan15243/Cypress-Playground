@@ -6,7 +6,7 @@ import {
   invalidUsername, 
   invalidPassword, 
   logout,
-  inactiveSession, emptyUserPassFields} from "../../page-objects/cmsUpgrade";
+  inactiveSession, emptyUserPassFields} from "../../modules/cmsUpgrade";
 
 
 describe("CMS Upgrade Regression Testss", function(){

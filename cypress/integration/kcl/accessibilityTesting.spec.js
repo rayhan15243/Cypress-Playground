@@ -1,4 +1,4 @@
-import { runAlly } from "../../page-objects/cypressAxeAlly.js";
+import { runAlly } from "../../modules/cypressAxeAlly.js";
 
 
 

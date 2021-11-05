@@ -4,7 +4,7 @@ import {
   keyNavClicked,
   hoverDropDown,
   secondaryNavVisible,
-  secondaryNavClicked} from "../../page-objects/globalNavFooter";
+  secondaryNavClicked} from "../../modules/globalNavFooter";
 
 describe("Global Nav Main", function(){
 
