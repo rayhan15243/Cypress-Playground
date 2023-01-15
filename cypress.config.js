@@ -14,6 +14,7 @@ module.exports = defineConfig({
   eyesFailCypressOnDiff: true,
   eyesPort: 59523,
   e2e: {
+    defaultCommandTimeout: 5000,
     // We've imported your old cypress plugins here.
     // You may want to clean this up later by importing these.
     setupNodeEvents(on, config) {
